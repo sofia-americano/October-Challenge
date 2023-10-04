@@ -4,7 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
     <title>Spaghetti Bolognese</title>
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-image: linear-gradient(89deg, rgb(253, 220, 155) 26.2%, rgb(255, 215, 165) 48.5%);
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-gap: 64px;
+        }
+
+        .img-responsive {
+            width: 100%;
+            height: auto;
+        }
+
+        .grid-2-columns {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 0;
+        }
+
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+                url("https://bakingmischief.com/wp-content/uploads/2022/02/fast-bolognese-square-2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 200px 0;
+        }
+
+        header h1 {
+            font-weight: 600;
+            font-size: 96px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        header h3 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.5;
+            letter-spacing: 4px;
+            margin: 0;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+            padding: 16px 32px;
+            margin-top: 32px;
+            display: inline-block;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: #f7ddbb;
+        }
+
+        main {
+            background-color: #f7ddbb;
+        }
+
+        main h2 {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+            letter-spacing: 5px;
+            color: #e9a449;
+            opacity: 0.7;
+            text-transform: uppercase;
+        }
+
+        main h3 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 1.5;
+            color: #e9a449;
+            margin: 0;
+        }
+
+        main p {
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.5;
+            color: white;
+        }
+
+        @media (max-width: 960px) {
+            header {
+                padding: 60px 0;
+            }
+
+            header h1 {
+                font-size: 48px;
+            }
+
+            header h2 {
+                font-size: 20px;
+            }
+
+            header h3 {
+                font-size: 12px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                grid-gap: 32px;
+            }
+
+            section {
+                padding: 30px;
+            }
+
+            .grid .img-responsive {
+                max-width: 70%;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -17,8 +156,42 @@
         <main>
             <section class="grid grid-2-columns">
                 <div>
-                    <img src="https://bakingmischief.com/wp-content/uploads/2022/02/fast-bolognese-square-2.jpg"
+                    <img src="https://www.eatingonadime.com/wp-content/uploads/2023/06/cp-bolognese-7-2.jpg"
                         alt="spaghetti" class="img-responsive" />
+                </div>
+                <div>
+                    <h2>Some history about Spaghetti Bolognese</h2>
+                    <h3>An Italian dish</h3>
+                    <p>
+                        Spaghetti Bolognese, or 'spaghetti alla bolognese' in Italian, is a beloved Italian pasta dish
+                        that has become popular worldwide. Its origins can be traced back to the city of Bologna in the
+                        Emilia-Romagna region of northern Italy.
+
+                        The dish is traditionally known as 'tagliatelle al ragù' in Bologna, where it is typically
+                        served with flat ribbon pasta called tagliatelle instead of spaghetti. The Bolognese sauce,
+                        known as 'ragù alla bolognese,' is the heart of this dish. It is a slow-cooked meat sauce that
+                        combines ingredients like finely minced or ground meat (usually a mixture of beef and pork),
+                        onions, carrots, celery, tomatoes, herbs, and sometimes a touch of wine.
+                    </p>
+                    <p>
+                        The origins of ragù alla bolognese can be traced back several centuries. The recipe has evolved
+                        over time, with different variations emerging in different regions of Italy. However, the
+                        authentic Bolognese version is known for its simplicity and rich flavors.
+
+                        In the late 19th century, Italian immigrants brought their culinary traditions to other parts of
+                        the world, including the United States. Over time, spaghetti became the preferred pasta choice
+                        outside of Italy, leading to the popularization of the dish as 'spaghetti Bolognese.'
+                    </p>
+                    <p>
+                        Today, spaghetti Bolognese is enjoyed in countless homes, restaurants, and Italian eateries
+                        worldwide. It has become a comfort food staple and a go-to dish for pasta lovers. Variations of
+                        the recipe can be found, with some adding additional ingredients or making adaptations to suit
+                        personal tastes or dietary preferences.
+
+                        Whether you savor it with traditional tagliatelle or embrace the widely adopted spaghetti
+                        version, spaghetti Bolognese continues to captivate taste buds and bring people together around
+                        the shared love for Italian cuisine.
+                    </p>
                 </div>
             </section>
         </main>
