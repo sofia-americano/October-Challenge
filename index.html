@@ -7,13 +7,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Spaghetti Bolognese</title>
 
     <style>
         body {
             font-family: "Poppins", sans-serif;
-            background-image: linear-gradient(89deg, rgb(253, 220, 155) 26.2%, rgb(255, 215, 165) 48.5%);
-            background-repeat: no-repeat;
+            background-color: #e9a449;
         }
 
         .container {
@@ -21,14 +23,22 @@
             margin: 0 auto;
         }
 
+        .text-center {
+            text-align: center;
+        }
+
         .grid {
             display: grid;
-            grid-gap: 64px;
+            grid-gap: 65px;
         }
 
         .img-responsive {
-            width: 100%;
-            height: auto;
+            max-width: 100%;
+            align-items: center;
+        }
+
+        .card .card-header .img-responsive {
+            aspect-ratio: 1/1;
         }
 
         .grid-2-columns {
@@ -36,10 +46,95 @@
             align-items: center;
         }
 
+        .grid-3-columns {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .grid-3-columns-with-first-narrow {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .instagram-embeds {
+            margin: 30px 0;
+        }
+
+        .first-paragraph {
+            color: #efd0a7;
+        }
+
+        .embed {
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
+
+        .card {
+            background: white;
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-header.grid {
+            grid-gap: 5px;
+            padding: 10px;
+        }
+
+        .card-body {
+            padding: 30px;
+            color: #f5d4bc;
+        }
+
+        .card-footer {
+            padding: 30px 30px 30px;
+        }
+
+        .btn {
+            display: block;
+            background-color: #e9a449;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .second-paragraph {
+            color: white !important;
+
+        }
+
+        .social-icons {
+            margin-top: -40px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-links li {
+            margin-right: 10px;
+        }
+
+        .footer-links a:hover {
+            color: #e9a449;
+        }
+
         section {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 100px 0;
+            padding: 100px;
+        }
+
+        section.secondary {
+            background: #efd0a7;
         }
 
         header {
@@ -55,6 +150,13 @@
         header h1 {
             font-weight: 600;
             font-size: 96px;
+            line-height: 1.5;
+            margin: 30px 0;
+        }
+
+        header h2 {
+            font-weight: 400;
+            font-size: 40px;
             line-height: 1.5;
             margin: 0;
         }
@@ -79,11 +181,11 @@
             display: inline-block;
             letter-spacing: 3px;
             text-transform: uppercase;
-            background: #f7ddbb;
+            background: #e9a449;
         }
 
         main {
-            background-color: #f7ddbb;
+            background-color: white;
         }
 
         main h2 {
@@ -105,11 +207,66 @@
             margin: 0;
         }
 
-        main p {
+        main h4 {
+            font-weight: 700;
+            font-size: 23px;
+            line-height: 1;
+            color: #e9a449;
+            margin: 0;
+            padding-bottom: 15px;
+        }
+
+        main h5 {
+            font-weight: 700;
+            font-size: 13px;
+            margin: 0;
+            line-height: 1;
+            color: #e9a449;
+        }
+
+        p {
             font-style: normal;
             font-weight: 400;
+            font-size: 16px;
             line-height: 1.5;
+
+        }
+
+        footer {
             color: white;
+            background-image: linear-gradient(rgba(253, 220, 155, 0.9), rgba(255, 215, 165, 0.9)),
+                url("https://savora.pt/wp-content/uploads/2022/04/espaguete-a-bolonhesa-receita-italiana-1-1024x404.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 0;
+        }
+
+        footer h3 {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        footer p {
+            font-weight: 400;
+            font-size: 16px;
+            opacity: 0.8;
+            line-height: 24px;
+        }
+
+        footer ul {
+            padding: 0;
+        }
+
+        footer li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer a {
+            color: white;
+            opacity: 0.7;
         }
 
         @media (max-width: 960px) {
@@ -136,11 +293,17 @@
 
             section {
                 padding: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
 
-            .grid .img-responsive {
-                max-width: 70%;
-                height: auto;
+            .card-header img {
+                display: none;
+            }
+
+            .embed {
+                aspect-ratio: 16 / 9;
             }
         }
     </style>
@@ -154,7 +317,7 @@
             <a href="#more">Learn more</a>
         </header>
         <main>
-            <section class="grid grid-2-columns">
+            <section class="grid grid-2-columns" id="more">
                 <div>
                     <img src="https://www.eatingonadime.com/wp-content/uploads/2023/06/cp-bolognese-7-2.jpg"
                         alt="spaghetti" class="img-responsive" />
@@ -162,40 +325,480 @@
                 <div>
                     <h2>Some history about Spaghetti Bolognese</h2>
                     <h3>An Italian dish</h3>
-                    <p>
-                        Spaghetti Bolognese, or 'spaghetti alla bolognese' in Italian, is a beloved Italian pasta dish
-                        that has become popular worldwide. Its origins can be traced back to the city of Bologna in the
-                        Emilia-Romagna region of northern Italy.
+                    <div class="first-paragraph">
+                        <p>
+                            Spaghetti Bolognese, or 'spaghetti alla bolognese' in Italian, is a beloved Italian pasta
+                            dish
+                            that has become popular worldwide. Its origins can be traced back to the city of Bologna in
+                            the
+                            Emilia-Romagna region of northern Italy.
 
-                        The dish is traditionally known as 'tagliatelle al ragù' in Bologna, where it is typically
-                        served with flat ribbon pasta called tagliatelle instead of spaghetti. The Bolognese sauce,
-                        known as 'ragù alla bolognese,' is the heart of this dish. It is a slow-cooked meat sauce that
-                        combines ingredients like finely minced or ground meat (usually a mixture of beef and pork),
-                        onions, carrots, celery, tomatoes, herbs, and sometimes a touch of wine.
-                    </p>
-                    <p>
-                        The origins of ragù alla bolognese can be traced back several centuries. The recipe has evolved
-                        over time, with different variations emerging in different regions of Italy. However, the
-                        authentic Bolognese version is known for its simplicity and rich flavors.
+                            The dish is traditionally known as 'tagliatelle al ragù' in Bologna, where it is typically
+                            served with flat ribbon pasta called tagliatelle instead of spaghetti. The Bolognese sauce,
+                            known as 'ragù alla bolognese,' is the heart of this dish. It is a slow-cooked meat sauce
+                            that
+                            combines ingredients like finely minced or ground meat (usually a mixture of beef and pork),
+                            onions, carrots, celery, tomatoes, herbs, and sometimes a touch of wine.
+                        </p>
+                        <p>
+                            The origins of ragù alla bolognese can be traced back several centuries. The recipe has
+                            evolved
+                            over time, with different variations emerging in different regions of Italy. However, the
+                            authentic Bolognese version is known for its simplicity and rich flavors.
 
-                        In the late 19th century, Italian immigrants brought their culinary traditions to other parts of
-                        the world, including the United States. Over time, spaghetti became the preferred pasta choice
-                        outside of Italy, leading to the popularization of the dish as 'spaghetti Bolognese.'
-                    </p>
-                    <p>
-                        Today, spaghetti Bolognese is enjoyed in countless homes, restaurants, and Italian eateries
-                        worldwide. It has become a comfort food staple and a go-to dish for pasta lovers. Variations of
-                        the recipe can be found, with some adding additional ingredients or making adaptations to suit
-                        personal tastes or dietary preferences.
+                            In the late 19th century, Italian immigrants brought their culinary traditions to other
+                            parts of
+                            the world, including the United States. Over time, spaghetti became the preferred pasta
+                            choice
+                            outside of Italy, leading to the popularization of the dish as 'spaghetti Bolognese.'
+                        </p>
+                        <p>
+                            Today, spaghetti Bolognese is enjoyed in countless homes, restaurants, and Italian eateries
+                            worldwide. It has become a comfort food staple and a go-to dish for pasta lovers. Variations
+                            of
+                            the recipe can be found, with some adding additional ingredients or making adaptations to
+                            suit
+                            personal tastes or dietary preferences.
 
-                        Whether you savor it with traditional tagliatelle or embrace the widely adopted spaghetti
-                        version, spaghetti Bolognese continues to captivate taste buds and bring people together around
-                        the shared love for Italian cuisine.
-                    </p>
+                            Whether you savor it with traditional tagliatelle or embrace the widely adopted spaghetti
+                            version, spaghetti Bolognese continues to captivate taste buds and bring people together
+                            around
+                            the shared love for Italian cuisine.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="secondary">
+                <h2 class="text-center">Restaurant</h2>
+                <h3 class="text-center">My favourite place to eat Spaghetti Bolognese</h3>
+                <div class="grid grid-2-columns">
+                    <div class="card">
+                        <div class="card-header grid grid-2-columns">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/13/6a/f7/1d/photo0jpg.jpg"
+                                alt="restaurant" class="img-responsive">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.243334433641!2d-8.708653259378881!3d41.19466820804625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24692a59d3e24f%3A0x400f847f46ce6bbf!2sMamma%20Bella%20Le%C3%A7a%20da%20Palmeira!5e0!3m2!1spt-PT!2sch!4v1696457962656!5m2!1spt-PT!2sch"
+                                class="embed" style="border: 0" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="card-body">
+                            <h4>Mamma Bella</h4>
+                            <p>
+                                Welcome to Mamma Bella, a delightful Italian restaurant located in Leça da Palmeira,
+                                Portugal.
+                                Indulge in the flavors of Italy as you savor our authentic dishes prepared with the
+                                finest
+                                ingredients. Join us for a memorable dining experience that combines delicious food,
+                                warm hospitality, and a charming ambiance. Explore the map below to find your way to
+                                Mamma
+                                Bella and get ready to embark on a culinary journey through the heart of Italy.
+                            </p>
+                            <h5>Address:</h5>
+                            <p>R. Francisco Sá Carneiro 89, 4450-677 Leça da Palmeira</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://maps.app.goo.gl/nQ3B5pKck7fm9UBZ8" class="btn" target="_blank">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <div class="second-paragraph" style="color: white;">
+                        <p>
+                            I can't help but rave about Mamma Bella, the delightful Italian restaurant tucked away in
+                            Leça
+                            da Palmeira. From the moment I walked through the doors, I was greeted with a warm and
+                            inviting
+                            atmosphere that instantly made me feel at home.
+
+                            The flavors of Italy come alive in every dish at Mamma Bella. The authentic flavors and
+                            attention to detail in their cuisine are truly remarkable. Each bite is a tantalizing
+                            journey
+                            that transports me straight to the heart of Italy. The quality of the ingredients they use
+                            shines through in every mouthwatering dish they serve.
+
+                            Not only is the food exceptional, but the hospitality and ambiance at Mamma Bella are also
+                            unmatched. The staff members are welcoming, attentive, and passionate about ensuring a
+                            memorable
+                            dining experience. The cozy and charming setting adds an extra layer of enjoyment to my
+                            visits,
+                            making each meal feel like a special occasion.
+                        </p>
+                        <p>
+                            I highly recommend Mamma Bella to anyone looking for an extraordinary culinary adventure.
+                            Whether you're craving a classic pasta dish, a wood-fired pizza, or exploring their seasonal
+                            specials, you're in for a treat. Every visit to Mamma Bella leaves me with a sense of
+                            satisfaction and a desire to return for more.
+
+                            If you haven't had the pleasure of dining at Mamma Bella yet, I urge you to make a
+                            reservation
+                            and embark on your own culinary journey through Italy. Prepare to be impressed by the
+                            flavors,
+                            the hospitality, and the overall experience that makes Mamma Bella one of my favorite dining
+                            destinations.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2 class="text-center">Photos from my favourite Restaurant</h2>
+                <h3 class="text-center">Mamma Bella</h3>
+                <div class="instagram-embeds">
+                    <div class="grid grid-3-columns">
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/p/CxgU7yitCsf/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            data-instgrm-version="14"
+                            style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                            <div style="padding:16px;"> <a
+                                    href="https://www.instagram.com/p/CxgU7yitCsf/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                    style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                                    target="_blank">
+                                    <div style=" display: flex; flex-direction: row; align-items: center;">
+                                        <div
+                                            style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                                        </div>
+                                        <div
+                                            style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                                            </div>
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 19% 0;"></div>
+                                    <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg
+                                            width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                                            xmlns="https://www.w3.org/2000/svg"
+                                            xmlns:xlink="https://www.w3.org/1999/xlink">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                                    <g>
+                                                        <path
+                                                            d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg></div>
+                                    <div style="padding-top: 8px;">
+                                        <div
+                                            style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                                            Ver esta publicação no Instagram</div>
+                                    </div>
+                                    <div style="padding: 12.5% 0;"></div>
+                                    <div
+                                        style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                        <div>
+                                            <div
+                                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                                            </div>
+                                            <div
+                                                style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                                            </div>
+                                            <div
+                                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                                            </div>
+                                        </div>
+                                        <div style="margin-left: 8px;">
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                                            </div>
+                                            <div
+                                                style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                                            </div>
+                                        </div>
+                                        <div style="margin-left: auto;">
+                                            <div
+                                                style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                                            </div>
+                                            <div
+                                                style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                                            </div>
+                                            <div
+                                                style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                                        <div
+                                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                                        </div>
+                                        <div
+                                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                                        </div>
+                                    </div>
+                                </a>
+                                <p
+                                    style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                    <a href="https://www.instagram.com/p/CxgU7yitCsf/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                        style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                                        target="_blank">Uma publicação partilhada por Mamma Bella
+                                        (@mammabella_pizzeria)</a>
+                                </p>
+                            </div>
+                        </blockquote>
+
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/p/CwfVKOCNTbu/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            data-instgrm-version="14"
+                            style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                            <div style="padding:16px;"> <a
+                                    href="https://www.instagram.com/p/CwfVKOCNTbu/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                    style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                                    target="_blank">
+                                    <div style=" display: flex; flex-direction: row; align-items: center;">
+                                        <div
+                                            style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                                        </div>
+                                        <div
+                                            style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                                            </div>
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 19% 0;"></div>
+                                    <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg
+                                            width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                                            xmlns="https://www.w3.org/2000/svg"
+                                            xmlns:xlink="https://www.w3.org/1999/xlink">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                                    <g>
+                                                        <path
+                                                            d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg></div>
+                                    <div style="padding-top: 8px;">
+                                        <div
+                                            style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                                            Ver esta publicação no Instagram</div>
+                                    </div>
+                                    <div style="padding: 12.5% 0;"></div>
+                                    <div
+                                        style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                        <div>
+                                            <div
+                                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                                            </div>
+                                            <div
+                                                style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                                            </div>
+                                            <div
+                                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                                            </div>
+                                        </div>
+                                        <div style="margin-left: 8px;">
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                                            </div>
+                                            <div
+                                                style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                                            </div>
+                                        </div>
+                                        <div style="margin-left: auto;">
+                                            <div
+                                                style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                                            </div>
+                                            <div
+                                                style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                                            </div>
+                                            <div
+                                                style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                                        <div
+                                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                                        </div>
+                                        <div
+                                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                                        </div>
+                                    </div>
+                                </a>
+                                <p
+                                    style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                    <a href="https://www.instagram.com/p/CwfVKOCNTbu/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                        style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                                        target="_blank">Uma publicação partilhada por Mamma Bella
+                                        (@mammabella_pizzeria)</a>
+                                </p>
+                            </div>
+                        </blockquote>
+
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/p/Cv7ro3cNP_9/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            data-instgrm-version="14"
+                            style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                            <div style="padding:16px;"> <a
+                                    href="https://www.instagram.com/p/Cv7ro3cNP_9/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                    style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                                    target="_blank">
+                                    <div style=" display: flex; flex-direction: row; align-items: center;">
+                                        <div
+                                            style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                                        </div>
+                                        <div
+                                            style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                                            </div>
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 19% 0;"></div>
+                                    <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg
+                                            width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                                            xmlns="https://www.w3.org/2000/svg"
+                                            xmlns:xlink="https://www.w3.org/1999/xlink">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                                    <g>
+                                                        <path
+                                                            d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg></div>
+                                    <div style="padding-top: 8px;">
+                                        <div
+                                            style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                                            Ver esta publicação no Instagram</div>
+                                    </div>
+                                    <div style="padding: 12.5% 0;"></div>
+                                    <div
+                                        style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                        <div>
+                                            <div
+                                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                                            </div>
+                                            <div
+                                                style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                                            </div>
+                                            <div
+                                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                                            </div>
+                                        </div>
+                                        <div style="margin-left: 8px;">
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                                            </div>
+                                            <div
+                                                style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                                            </div>
+                                        </div>
+                                        <div style="margin-left: auto;">
+                                            <div
+                                                style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                                            </div>
+                                            <div
+                                                style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                                            </div>
+                                            <div
+                                                style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                                        <div
+                                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                                        </div>
+                                        <div
+                                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                                        </div>
+                                    </div>
+                                </a>
+                                <p
+                                    style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                    <a href="https://www.instagram.com/p/Cv7ro3cNP_9/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                        style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                                        target="_blank">Uma publicação partilhada por Mamma Bella
+                                        (@mammabella_pizzeria)</a>
+                                </p>
+                            </div>
+                        </blockquote>
+                    </div>
                 </div>
             </section>
         </main>
+        <footer>
+            <section class="grid grid-3-columns-with-first-narrow">
+                <div>
+                    <h3>More about Spaghetti Bolognese</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.bbcgoodfood.com/recipes/best-spaghetti-bolognese-recipe">Recipe</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="https://en.wikipedia.org/wiki/Bolognese_sauce">Bolognese Sauce</a>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="https://pt.restaurantguru.com/spaghetti-bolognese-Porto-m7004">Others places to
+                                eat</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>About me</h3>
+                    <p>
+                        Hey there! I'm Sofia, and I'm excited to share my love for spaghetti bolognese and my
+                        favorite spot to enjoy it in Matosinhos: Mamma Bella. This cozy restaurant captures the essence
+                        of authentic Italian cuisine, and their spaghetti bolognese is simply divine. Join me as I
+                        explore the flavors that make this dish so special and celebrate the joy of savoring it at Mamma
+                        Bella, a place that holds a special place in my heart.
+                    </p>
+                </div>
+                <div>
+                    <h3>About this website</h3>
+                    <p>
+                        I took on the SheCodes Responsive Challenge as an opportunity to showcase my coding skills by
+                        creating this website. The challenge prompted me to design a captivating landing page dedicated
+                        to my favorite dish. Through engaging text, interactive elements, and personal anecdotes, I
+                        aimed to convey why this dish holds a special place in my heart. This submission meets all the
+                        entry requirements and reflects my creativity and passion for the 🥮 Flavorful Food Challenge.
+                    </p>
+                </div>
+            </section>
+            <div class="social-icons">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="footer-links">
+                            <li>
+                                <a href="https://www.linkedin.com/in/sofia-americano/" target="_blank">
+                                    <i class="fab fa-linkedin-in fa-lg"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/sofia-americano" target="_blank">
+                                    <i class="fab fa-github fa-lg"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
+
+    <script async src="//www.instagram.com/embed.js"></script>
 </body>
 
 </html>
